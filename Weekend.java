@@ -98,7 +98,6 @@ class Executable {
 	Depense d3 = new Depense(pierre, 70, "essence");
 	Depense d4 = new Depense(marie, 15, "vin");  
 	Depense d5 = new Depense(paul, 10, "vin"); 
-	WeekEnd we = new WeekEnd();  
 	we.ajouterPersonne(pierre); 
 	we.ajouterPersonne(paul);
 	we.ajouterPersonne(marie);
@@ -118,5 +117,8 @@ class Executable {
 	System.out.println("avoir de pierre "+we.avoirPersonne(pierre));
 	System.out.println("avoir de paul "+we.avoirPersonne(paul));	
 	System.out.println("avoir de marie "+we.avoirPersonne(marie));
+
+	
+
     }
 }
