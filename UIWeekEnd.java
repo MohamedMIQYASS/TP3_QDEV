@@ -1,4 +1,7 @@
 package TP4;
+import java.util.List; 
+import java.util.ArrayList;
+
 
 public class UIWeekEnd {
 
@@ -71,14 +74,21 @@ public class UIWeekEnd {
             } 
             else if (commande.equals("d")){
                 List<Personne> personnes = this.we.getAmis();
-                System.out.println("les participants sont :");
+                System.out.println("les dépenses sont :");
                 for ( Personne p : personnes){
-                    System.out.println("\t" +p );
+                    System.out.println("\t" +d );
                 }
                 System.out.println("");
+            }
+           else if (commande.equals("t")){
+            List<Personne> personnes = this.we.getAmis();
+            System.out.println("Total des dépenses :");
+            for ( Personne p : personnes){
+                System.out.println("\t" +t );
+            }
+            System.out.println("");
+
         }
-        }
-    
         /// Affiche un message de bienvenue
         public void bienvenue() {
         System.out.println("╭────────────────────────────────────────────────────────────────────────────────────╮");
