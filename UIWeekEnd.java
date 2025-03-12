@@ -94,15 +94,15 @@ public class UIWeekEnd {
         System.out.println("╭────────────────────────────────────────────────────────────────────────────────────╮");
         System.out.println("│ Bienvenue! En week-end comme dans la semaine, les bons comptes font les bons amis. │");
         System.out.println("╰────────────────────────────────────────────────────────────────────────────────────╯");
-        }
+        
     
         /// Affiche un message d'au revoir
         public void au_revoir() {
             System.out.println("Au revoir !!");
         
-        }
+        
     
-    }
+        }
     
     
 }
