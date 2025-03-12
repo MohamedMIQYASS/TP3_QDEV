@@ -25,7 +25,7 @@ public class UIWeekEnd {
 	we.ajouterDepense(d3);
 	we.ajouterDepense(d5);
 
-    AppWeekEnd app = new AppWeekEnd(leWeekEnd);
+    AppWeekEnd app = new AppWeekEnd(we);
     app.run();
     }
     }
@@ -60,16 +60,22 @@ public class UIWeekEnd {
             if(commande.equals("q")) {
             quitter = true;
             commande_faite = true;
-            } else if (commande.equals("p")){
+            } 
+            else if (commande.equals("p")){
                 List<Personne> personnes = this.we.getAmis();
-                System.err.println("les participants sont :");
+                System.out.println("les participants sont :");
                 for ( Personne p : personnes){
-                    System.out.println(p);
+                    System.out.println("\t" +p );
                 }
-            }
-            } else {
-            System.out.println("Commande '" + commande_brute + "' invalide.");
-            }
+                System.out.println("");
+            } 
+            else if (commande.equals("d")){
+                List<Personne> personnes = this.we.getAmis();
+                System.out.println("les participants sont :");
+                for ( Personne p : personnes){
+                    System.out.println("\t" +p );
+                }
+                System.out.println("");
         }
         }
     
