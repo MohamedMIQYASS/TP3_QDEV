@@ -96,6 +96,7 @@ class WeekEnd{
 
 class Executable {
     public static void main(String [] args) {
+	WeekEnd we = new WeekEnd();
 	Personne pierre = new Personne("Durand","Pierre"); 
 	System.out.println(pierre.getNom()); 
 	Personne paul = new Personne("Dupond","Paul"); 

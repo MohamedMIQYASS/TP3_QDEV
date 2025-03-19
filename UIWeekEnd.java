@@ -35,12 +35,14 @@ public class UIWeekEnd {
         
     class AppWeekEnd {
     
-        WeekEnd we;
-        boolean quitter;
+        private WeekEnd we;
+        private boolean quitter;
+        private Personne personne_selectionnee;
     
         AppWeekEnd(WeekEnd we) {
         this.we = we;
         this.quitter = false;
+        this.personne_selectionnee = null;
         }
     
         public void run() {
@@ -58,6 +60,9 @@ public class UIWeekEnd {
             System.out.println("Que voulez vous faire?");
             System.out.println("P : Afficher la liste des personnes");
             System.out.println("Q: quitter");
+            System.out.println("D: Afficher la liste des dépenses");
+            System.out.println("T: Afficher le total des dépenses");
+            System.out.println("M: Afficher la moyenne des dépenses");
             String commande_brute = System.console().readLine();
             String commande = commande_brute.strip().toLowerCase();
             if(commande.equals("q")) {
@@ -76,7 +81,7 @@ public class UIWeekEnd {
                 List<Personne> personnes = this.we.getAmis();
                 System.out.println("les dépenses sont :");
                 for ( Personne p : personnes){
-                    System.out.println("\t" +d );
+                    System.out.println("\t" + d );
                 }
                 System.out.println("");
             }
@@ -89,13 +94,17 @@ public class UIWeekEnd {
             System.out.println("");
 
         }
+
+    }
+
+}
         /// Affiche un message de bienvenue
         public void bienvenue() {
         System.out.println("╭────────────────────────────────────────────────────────────────────────────────────╮");
         System.out.println("│ Bienvenue! En week-end comme dans la semaine, les bons comptes font les bons amis. │");
         System.out.println("╰────────────────────────────────────────────────────────────────────────────────────╯");
         
-    
+        }
         /// Affiche un message d'au revoir
         public void au_revoir() {
             System.out.println("Au revoir !!");
